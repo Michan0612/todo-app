@@ -1,7 +1,8 @@
-.container
-  = render 'tabs'
-  - @boards.each do |board|
-    = render 'commons/board', board: board
-  = link_to new_board_path do
-    .float_btn
-      %i.fa.fa-plus
+.container.tabs
+  .wrap.tabs
+    %p.header_text Boads
+    .border_room
+    %h1.tabs-text All Boards
+    - @boards.each do |board|
+      = render 'commons/board', board: board
+    .add-new-board +Add new board
