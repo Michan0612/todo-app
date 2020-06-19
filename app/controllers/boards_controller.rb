@@ -1,11 +1,12 @@
 class BoardsController < ApplicationController
+  before_action :set_board, only: %i[show]
 
   def index
     @boards = Board.all
   end
 
   def show
-
+    @board
   end
 
   def new
@@ -30,8 +31,21 @@ class BoardsController < ApplicationController
     @board = current_user.boards.find(params[:id])
   end
 
+  def destroy
+    board = current_user.boards.find(params[:id])
+    board.destroy!
+    redirect_to root_path, notice: '削除に成功しました'
+  end
+
+  
+
+  private
   def board_params
     params.require(:board).permit(:title, :content, :eyecatch)
+  end
+
+  def set_board
+    @board = Board.find(params[:id])
   end
 
 end
