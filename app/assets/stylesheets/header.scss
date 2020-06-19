@@ -1,0 +1,28 @@
+.container {
+
+    .header_text {
+        margin-left: 30px;
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 25px;
+        color: #000000;
+    }
+    
+    .border_room {
+        height: 1px;
+        background: #000000;
+        mix-blend-mode: normal;
+        opacity: 0.1;
+    }
+    
+    h2 {
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 36px;
+        color: #000000;
+    }
+}
