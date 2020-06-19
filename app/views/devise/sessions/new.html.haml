@@ -1,0 +1,16 @@
+.container
+  %p.header_text Boads
+  .border_room
+  %h2 Sign in
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .field
+      = f.label :email, class: 'text'
+      %br/
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'input_room'
+    .field.field2
+      = f.label :password, class: 'text'
+      %br/
+      = f.password_field :password, autocomplete: "current-password", class: 'input_room'
+    
+    .actions
+      = f.submit "Submit", class: 'submit_btn'
