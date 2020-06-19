@@ -7,8 +7,15 @@
     .tabs-card {
         width: 100%;
         margin-top: 30px;
+        padding: 15px;
         background: #F4F4F4;
         border-radius: 10px;
+
+        .card_title {
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
     }
 
     .add-new-board {
