@@ -12,3 +12,15 @@
             = link_to '削除する', board_path(@board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
   .board_content
     = @board.content
+
+.board
+  %h2 タスク一覧
+  - @tasks.each do |task|
+    .article_comment
+      %p= task.title
+      %p= task.content
+
+.container
+  = link_to new_board_task_path(@board) do
+    .btn-secondary
+      タスクを追加
