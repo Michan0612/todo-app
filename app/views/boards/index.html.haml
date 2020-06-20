@@ -5,4 +5,5 @@
     %h1.tabs-text All Boards
     - @boards.each do |board|
       = render 'commons/board', board: board
-    .add-new-board +Add new board
+    = link_to new_board_path do
+      .add-new-board +Add new board
