@@ -6,3 +6,14 @@
 
   .task_content
     = @task.content
+
+.board
+  %h2 コメント一覧
+  - @comments.each do |comment|
+    .board_comment
+      %p= comment.content
+
+.container
+  = link_to new_board_task_comment_path(@board, @task) do
+    .btn-secondary
+      コメントを追加
