@@ -41,7 +41,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'erb2haml'
   gem 'pry-byebug'
-  gem 'rubocop-rails'
+  gem 'rubocop-rails' 
   gem 'dotenv-rails'
 end
 
