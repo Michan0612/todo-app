@@ -1,9 +1,9 @@
 {
-    "name": "blog app",
-    "description": "This is blogapp",
+    "name": "todo app",
+    "description": "This is todoapp",
     "keywords": [],
     "website": "",
-    "repository": "https://github.com/Michan0612/blogapp",
+    "repository": "https://github.com/Michan0612/todoapp",
     "env": {},
     "addons": [
       "heroku-postgresql:hobby-dev"
