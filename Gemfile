@@ -28,6 +28,7 @@ gem 'devise'
 gem 'faker'
 gem 'hamlit'
 gem 'aws-sdk-s3', require: false
+gem 'active_decorator'
 
 
 # Use Active Storage variant

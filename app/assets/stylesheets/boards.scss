@@ -44,6 +44,7 @@ $container-padding: 16px;
     display: flex;
     font-size: 12px;
     position: relative;
+
     img {
       cursor: pointer;
       width: $avatar-size;
@@ -51,6 +52,7 @@ $container-padding: 16px;
       border-radius: 100%;
       margin-right: 16px;
     }
+
     &_actions {
       right: 0px;
       position: absolute;

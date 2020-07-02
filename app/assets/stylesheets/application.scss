@@ -5,6 +5,9 @@
 @import 'boards';
 @import 'actiontext';
 @import 'trix/dist/trix.css';
+@import 'actiontext';
+@import 'trix/dist/trix.css';
+@import 'buttons';
 
 
 html {
@@ -37,7 +40,7 @@ a {
 }
 
 .container {
-    padding: 30px;
+    padding: 0 30px 30px;
 }
 
 h1 {
