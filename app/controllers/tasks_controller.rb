@@ -18,7 +18,7 @@ class TasksController < ApplicationController
 	def create
 		@task = current_user.tasks.build(task_params)
         if @task.save
-            redirect_to task_path(), notice: 'コメントを追加'
+            redirect_to task_path, notice: 'コメントを追加'
         else
             flash.now[:error] = '更新できませんでした'
             render :new
