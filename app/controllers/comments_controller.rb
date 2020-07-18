@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     end
 
     def create
-        @board = Board.find(params[:board_id])
+        @board = Task.find(params[:board_id])
         task = Task.find(params[:task_id])
         @comment = task.comments.build(comment_params)
         @comment.user = current_user

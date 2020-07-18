@@ -16,7 +16,6 @@ class Board < ApplicationRecord
     has_rich_text :content
 
     has_one_attached :eyecatch
-    has_many :tasks, dependent: :destroy
 
     belongs_to :user
 

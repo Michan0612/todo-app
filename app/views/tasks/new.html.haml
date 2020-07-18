@@ -4,7 +4,7 @@
         - @task.errors.full_messages.each do |message|
             %li= message
     
-    = form_with(model: @task, url: board_tasks_path(@task.board), local: true) do |f|
+    = form_with(model: @task, url: tasks_path, local: true) do |f|
         %div.title_label
             = f.label :eyecatch, 'Image'
         %div
