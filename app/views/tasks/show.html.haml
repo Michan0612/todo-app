@@ -1,19 +1,20 @@
-%h1.task_title= @task.title
-.board
-  - if @task.eyecatch.attached?
-    .board_image
-      = image_tag @task.eyecatch
-
-.task_content
-  = @task.content
-
-.comment_wrap
-  %h3 Comment
-  - @comments.each do |comment|
-    .board_comment
-      %p= comment.content
-
 .container
-  = link_to new_board_task_comment_path(@board, @task) do
-    .add-new-board
-      + Add new comment
+  %h1.task_title= @task.title
+  .board
+    - if @task.eyecatch.attached?
+      .board_image
+        = image_tag @task.eyecatch
+
+  .task_content
+    = @task.content
+
+  .comment_wrap
+    %h3 Comment
+    - @comments.each do |comment|
+      .board_comment
+        %p= comment.content
+
+  .container
+    = link_to new_task_comment_path(@task) do
+      .add-new-board
+        + Add new comment
