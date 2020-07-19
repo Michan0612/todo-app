@@ -17,6 +17,8 @@ class Board < ApplicationRecord
 
     has_one_attached :eyecatch
 
+    has_many :tasks
+
     belongs_to :user
 
 end
