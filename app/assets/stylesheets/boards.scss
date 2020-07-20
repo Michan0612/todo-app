@@ -28,6 +28,7 @@ $container-padding: 16px;
 
   &_title {
     font-size: 22px;
+    word-wrap: break-word;
   }
 
   &_comment {
@@ -35,7 +36,6 @@ $container-padding: 16px;
   }
 
   &_detail {
-    padding-top: 10px;
     display: flex;
     font-size: 12px;
     position: relative;
@@ -58,3 +58,14 @@ $container-padding: 16px;
   }
   
 }
+
+
+
+
+
+
+
+
+
+
+

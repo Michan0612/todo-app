@@ -1,5 +1,14 @@
 .container
   %h1.task_title= @task.title
+  .task_detail
+    %div
+      - if user_signed_in? && current_user.tasks.exists?
+        .board_detail_actions
+          .dropdown
+            = image_tag 'actions.svg', class: 'dropbtn'
+            .dropdown-content.mini
+              = link_to '編集する', edit_task_path(@task)
+              = link_to '削除する', task_path(@task), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
   .board
     - if @task.eyecatch.attached?
       .board_image
@@ -11,10 +20,14 @@
   .comment_wrap
     %h3 Comment
     - @comments.each do |comment|
-      .board_comment
-        %p= comment.content
+      .comment_container
+        .task_detail_img
+          = image_tag @task.user.avatar_image
+        .task_comment
+          %p.task_text= comment.content
+          
 
-  .container
+  
     = link_to new_task_comment_path(@task) do
       .add-new-board
         + Add new comment

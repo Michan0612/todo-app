@@ -32,11 +32,9 @@ class TasksController < ApplicationController
 	end
 	
 	def update
-		
 		@task = current_user.tasks.find(params[:id])
-		board = @task.board
 		if @task.update(task_params)
-			redirect_to board_path(board), notice: '更新できました'
+			redirect_to task_path(@task), notice: '更新できました'
 		else
 			flash.now[:error] = '更新できませんでした'
 			render :edit

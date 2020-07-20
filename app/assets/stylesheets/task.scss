@@ -1,5 +1,13 @@
+$heart-size: 32px;
+$avatar-size: 32px;
+$container-padding: 16px;
+
 .task_title {
-    margin-bottom: 15px
+    overflow: hidden;
+    margin-bottom: 15px;
+    margin-right: 48px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .task_content {
     width: 100%;
@@ -8,4 +16,52 @@
     padding: 15px;
     background: #F4F4F4;
     border-radius: 10px;
+    word-wrap: break-word;
 }
+
+.task_detail {
+    display: flex;
+    font-size: 12px;
+    position: relative;
+    margin-left: 10px; 
+    top: -55px;
+
+    img {
+        cursor: pointer;
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 100%;
+        margin-right: 16px;
+    }
+}
+
+.task_detail_img {
+    display: flex;
+    font-size: 12px;
+    position: relative;
+    margin-left: 10px; 
+
+    img {
+        cursor: pointer;
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 100%;
+        margin-right: 16px;
+    }
+}
+
+    
+
+.task_actions {
+    right: 0px;
+    position: absolute;
+}
+
+.task_comment {
+    word-wrap: break-word;
+
+}
+
+.comment_container {
+}
+
